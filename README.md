@@ -28,11 +28,34 @@ RegisterNumber:
 Program to find the LU Decomposition of a matrix.
 Developed by: 
 RegisterNumber: 
+import numpy as np
+import scipy
+from scipy.linalg import lu
+A =eval(input())
+P,L,U=lu(A)
+print(L)
+print(U)
 */
+
+
+Program to find the LU Decomposition of a matrix.
+Developed by: 
+RegisterNumber:
+import numpy as np
+from scipy.linalg import lu_factor,lu_solve
+A =eval(input())
+B =eval(input())
+lu,piv= lu_factor(A)
+x= lu_solve((lu,piv),B)
+print(x)
+*/
+
 ```
 
 ## Output:
-![lu decomposition]()
+![lu decomposition](./sso.png)
+![lu decomposition](./ssp.png)
+
 
 
 ## Result:
